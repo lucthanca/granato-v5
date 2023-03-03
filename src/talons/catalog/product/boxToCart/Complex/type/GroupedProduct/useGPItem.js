@@ -1,5 +1,5 @@
 import { useMemo, useImperativeHandle, useRef, useCallback } from 'react';
-import { useCatalogTaxPriceConfig } from '../../../../../storeConfig/useCatalogTaxPriceConfig';
+import { useCatalogTaxPriceConfig } from '../../../../../../storeConfig/useCatalogTaxPriceConfig';
 
 export const useGPItem = (props, ref) => {
   const { item = {} } = props;

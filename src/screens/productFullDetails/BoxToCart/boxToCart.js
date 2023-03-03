@@ -4,7 +4,7 @@ import { func, object } from 'prop-types';
 // import Constants from '@helper/constants';
 import Qty from './qty';
 // import Icon from 'react-native-vector-icons/EvilIcons';
-import { useBoxToCart } from '../../../talons/product/boxToCart/useBoxToCart';
+import { useBoxToCart } from '../../../talons/catalog/product/boxToCart/useBoxToCart';
 import mergeStyles from '../../../utils/mergeStyles';
 import DEFAULT_STYLES from './boxToCart.style';
 
@@ -21,7 +21,6 @@ const BoxToCart = props => {
   const talonProps = useBoxToCart({ product, onQtyChange });
   const { handleAddToCart, ref, handleSetQty, complexAddCartBoxRef, hideQty, hasComplexBoxToCart, addCartRef } = talonProps;
   let addToCartStyle = {};
-  console.log({ hideQty });
   if (!hideQty) {
     addToCartStyle = {
       addToCartButton: {
@@ -29,7 +28,6 @@ const BoxToCart = props => {
       },
     };
   }
-  console.log(addToCartStyle);
   return (
     <View style={style.root}>
       {!hideQty && <Qty initValue={1} setQty={handleSetQty} />}

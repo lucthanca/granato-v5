@@ -1,5 +1,4 @@
-import lodash from 'lodash';
-
-export default (...rest) => {
-  return lodash.merge(...rest);
+import merge from 'lodash.merge';
+export default (...args) => {
+  return merge(...args);
 };

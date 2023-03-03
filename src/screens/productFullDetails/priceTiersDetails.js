@@ -3,7 +3,7 @@ import { array } from 'prop-types';
 import { View, Text } from 'react-native';
 import Constants from '../../constants';
 import FinalPrice from '../../components/Price/finalPrice';
-import { usePriceTiersDetails } from '../../talons/product/usePriceTiersDetails';
+import { usePriceTiersDetails } from '../../talons/catalog/product/usePriceTiersDetails';
 
 const TierPriceMessage = props => {
   const { tierPrice, style } = props;

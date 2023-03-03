@@ -3,7 +3,7 @@ import { View, TouchableOpacity, TextInput } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import defaultStyles from './qty.style';
 import mergeStyles from '../../../../utils/mergeStyles';
-import { useQty } from '../../../../talons/product/boxToCart/Complex/useQty';
+import { useQty } from '../../../../talons/catalog/product/boxToCart/Complex/useQty';
 import Constants from '../../../../constants';
 import { func, number } from 'prop-types';
 

@@ -1,11 +1,11 @@
 import { useMemo, useCallback, useState, useRef } from 'react';
 import { useQuery } from '@apollo/client';
 import operations from './useProductPage.gql';
-import mapProduct from '../../utils/mapProduct';
+import mapProduct from '../../../utils/mapProduct';
 // import { useUserContext} from '../../../lib/context/user';
 
-import { useCatalogTaxPriceConfig } from '../storeConfig/useCatalogTaxPriceConfig';
-import Identify from '../../utils/identify';
+import { useCatalogTaxPriceConfig } from '../../storeConfig/useCatalogTaxPriceConfig';
+import Identify from '../../../utils/identify';
 
 export const useProductPage = props => {
   // urlKey configurable; r-vo-d-ch-vay-ti-u-thu-tr-ng-tr-vai-d-m-xoe-babydoll-m-c-nhi-u-ki-u-hot

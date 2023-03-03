@@ -1,10 +1,10 @@
 import React from 'react';
-import { View, Text, TouchableOpacity } from 'react-native';
+import { View, Text, TouchableOpacity, StyleSheet } from 'react-native';
 import defaultStyles from './productCart.style';
 import mergeStyles from '../../../utils/mergeStyles';
 import FastImage from 'react-native-fast-image';
 import FinalPrice from '../../../components/Price';
-import { useProductCart } from '../../../talons/product/RelatedProduct/useProductCart';
+import { useProductCart } from '../../../talons/catalog/product/RelatedProduct/useProductCart';
 import AddToWishlist from '../../../components/WishList/addToWishlist';
 import { object } from 'prop-types';
 
@@ -12,7 +12,7 @@ const ProductCart = props => {
   const { product, customerWishlist } = props;
   const talonProps = useProductCart({ product });
   const { finalPrice, priceConfig, minimumPrice, handlePressProduct } = talonProps;
-  const styles = mergeStyles(defaultStyles, props.style);
+  const styles = StyleSheet.create(mergeStyles(defaultStyles, props.style));
   // console.log('RENDER product cart');
   return (
     <View style={styles.root}>

@@ -5,7 +5,7 @@ import ImageViewer from 'react-native-image-zoom-viewer';
 import mergeStyles from '../../../../../utils/mergeStyles';
 import { object } from 'prop-types';
 import defaultStyles from './fullScreenPreview.style';
-import { useFullScreenView } from '../../../../../talons/product/boxToCart/Complex/useFullScreenView';
+import { useFullScreenView } from '../../../../../talons/catalog/product/boxToCart/Complex/useFullScreenView';
 import Icon from 'react-native-vector-icons/AntDesign';
 
 const FullScreenPreview = (props, ref) => {

@@ -1,7 +1,8 @@
 import Constants from '../../../../constants';
 import boxToCartStyle from '../boxToCart.style';
+import { StyleSheet } from 'react-native';
 
-export default {
+export default StyleSheet.create({
   addToCartButton: {
     ...boxToCartStyle.addToCartBtn,
     flex: 1,
@@ -16,4 +17,4 @@ export default {
   addToCartTextDisabled: {
     color: Constants.color.gray.lighter,
   },
-};
+});

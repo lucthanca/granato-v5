@@ -1,5 +1,5 @@
 import { useImperativeHandle, useMemo, useRef, useCallback } from 'react';
-import { useCatalogTaxPriceConfig } from '../../../storeConfig/useCatalogTaxPriceConfig';
+import { useCatalogTaxPriceConfig } from '../../../../storeConfig/useCatalogTaxPriceConfig';
 
 export const useBoxToCartComplex = props => {
   const { product, ref } = props;

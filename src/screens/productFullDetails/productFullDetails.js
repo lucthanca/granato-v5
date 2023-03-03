@@ -1,5 +1,5 @@
 import React, { memo, useRef } from 'react';
-import { useProductPage } from '../../talons/product/useProductPage';
+import { useProductPage } from '../../talons/catalog/product/useProductPage';
 import Constants from '../../constants';
 import Images from './ImageCarousel';
 import { View, Text, Dimensions, KeyboardAvoidingView, ScrollView, TouchableOpacity, Platform } from 'react-native';

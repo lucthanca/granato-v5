@@ -1,5 +1,5 @@
 import React, { forwardRef, memo } from 'react';
-import { useCPAddToCart } from '../../../../../talons/product/boxToCart/Complex/type/useCPAddToCart';
+import { useCPAddToCart } from '../../../../../talons/catalog/product/boxToCart/Complex/type/useCPAddToCart';
 import defaultStyles from './configurableProduct.style';
 import mergeStyles from '../../../../../utils/mergeStyles';
 import ConfigurableOption from '../ConfigurableOption';

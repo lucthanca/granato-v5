@@ -3,7 +3,7 @@ import FastImage from 'react-native-fast-image';
 import { View, ActivityIndicator, TouchableOpacity } from 'react-native';
 import mergeStyles from '../../../../../utils/mergeStyles';
 import defaultStyles from './imagePreview.style';
-import { useImagePreview } from '../../../../../talons/product/boxToCart/Complex/useImagePreview';
+import { useImagePreview } from '../../../../../talons/catalog/product/boxToCart/Complex/useImagePreview';
 import { array } from 'prop-types';
 import Icon from 'react-native-vector-icons/Entypo';
 // import ImageViewer from 'react-native-image-zoom-viewer';

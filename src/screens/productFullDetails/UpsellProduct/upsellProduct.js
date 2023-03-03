@@ -1,7 +1,7 @@
 import React from 'react';
 import { View, Text, FlatList } from 'react-native';
 import defaultStyles from './upsellProduct.style';
-import { useUpsellProduct } from '../../../talons/product/UpsellProduct/useUpsellProduct';
+import { useUpsellProduct } from '../../../talons/catalog/product/UpsellProduct/useUpsellProduct';
 import { string } from 'prop-types';
 import mergeStyles from '../../../utils/mergeStyles';
 import makeid from '../../../utils/makeId';

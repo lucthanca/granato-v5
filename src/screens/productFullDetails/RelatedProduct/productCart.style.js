@@ -1,5 +1,5 @@
 import Constants from '../../../constants';
-import { Dimensions } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 
 const { width: screenW } = Dimensions.get('window');
 export default {
@@ -42,22 +42,22 @@ export default {
   productNameText: {
     fontSize: Constants.fontSize.sm,
   },
-  priceBox: {
-    finalPrice: {
+  priceBox: StyleSheet.create({
+    finalPrice: StyleSheet.create({
       text: {
         fontSize: Constants.fontSize['2sm'],
         color: Constants.color.red.darker,
         fontWeight: '600',
       },
-    },
+    }),
     asLowAsText: {
       fontSize: Constants.fontSize.sm,
       color: Constants.color.gray.darker,
     },
-    regularPrice: {
+    regularPrice: StyleSheet.create({
       text: {
         fontSize: Constants.fontSize.xs,
       },
-    },
-  },
+    }),
+  }),
 };

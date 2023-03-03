@@ -4,7 +4,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { useRouteContext } from './routeContextProvider';
 import HeaderLeft from '../components/headerLeft';
 import HomeScreen from '../screens/home';
-import { ProductFullDetail } from '../screens';
+import { ProductFullDetail, Category } from '../screens';
 
 function ProfileScreen({ navigation }) {
   return (
@@ -75,6 +75,7 @@ function MyStack() {
       />
       <Stack.Screen name="Settings" component={SettingsScreen} />
       <Stack.Screen name="ProductFullDetail" component={ProductFullDetail} />
+      <Stack.Screen name="Category" component={Category} />
       <Stack.Group screenOptions={{ presentation: 'fullScreenModal' }}>
         <Stack.Screen name="Help" component={Help} />
         <Stack.Screen name="Invite" component={Invite} />

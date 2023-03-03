@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import RouteContextProvider from "./routeContextProvider";
-import CombinedRoutes from "./combinedRoutes";
+import RouteContextProvider from './routeContextProvider';
+import CombinedRoutes from './combinedRoutes';
 
 export default props => {
   return (
@@ -9,4 +9,4 @@ export default props => {
       <CombinedRoutes {...props} />
     </RouteContextProvider>
   );
-}
+};

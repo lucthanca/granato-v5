@@ -2,9 +2,9 @@ import { useCallback, useEffect, useImperativeHandle, useRef, useState } from 'r
 import { useMutation } from '@apollo/client';
 import operations from './useBoxToCart.gql';
 import { Keyboard } from 'react-native';
-import { useCartContext } from '../../../context/cart';
+import { useCartContext } from '../../../../context/cart';
 import Toast from 'react-native-toast-message';
-import t from '../../../utils/identify';
+import t from '../../../../utils/identify';
 const STEP = {
   INIT: 0,
   ADD_TO_CART: 1,

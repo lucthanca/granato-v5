@@ -1,7 +1,8 @@
 import Constants from '../../constants';
+import { StyleSheet } from 'react-native';
 
 const WRAPPER_PADDING = Constants.alignSize[2];
-export default {
+export default StyleSheet.create({
   addToWishlistContainer: {
     position: 'absolute',
     top: 0,
@@ -12,16 +13,16 @@ export default {
   productNameBox: { marginVertical: Constants.alignSize[2] },
   productSkuText: { color: Constants.color.gray.lighter },
   productNameText: { marginTop: Constants.alignSize[1], fontSize: Constants.fontSize.md },
-  priceBox: {
-    finalPrice: {
+  priceBox: StyleSheet.create({
+    finalPrice: StyleSheet.create({
       text: {
         fontSize: Constants.fontSize.lg,
         color: Constants.color.red.darker,
         fontWeight: '600',
       },
       currency: { marginRight: Constants.alignSize[1] },
-    },
+    }),
     root: { marginVertical: Constants.alignSize[2] },
-  },
+  }),
   tierPricesBox: { marginVertical: Constants.alignSize[2] },
-};
+});

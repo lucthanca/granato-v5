@@ -1,6 +1,6 @@
 import React, { forwardRef, memo } from 'react';
 import { Text, View } from 'react-native';
-import { useGPAddToCart } from '../../../../../talons/product/boxToCart/Complex/type/useGPAddToCart';
+import { useGPAddToCart } from '../../../../../talons/catalog/product/boxToCart/Complex/type/useGPAddToCart';
 import mergeStyles from '../../../../../utils/mergeStyles';
 import defaultStyles from './groupedProduct.style';
 import GroupedProductItem from './groupedProductItem';

@@ -4,7 +4,7 @@ import { ScrollView, View, Text, ActivityIndicator } from 'react-native';
 import defaultStyles from './boxToCartComplex.style';
 import mergeStyles from '../../../../utils/mergeStyles';
 import FullScreenPreview from './ImagePreview/fulllScreenPreview';
-import { useBoxToCartComplex } from '../../../../talons/product/boxToCart/Complex/useBoxToCartComplex';
+import { useBoxToCartComplex } from '../../../../talons/catalog/product/boxToCart/Complex/useBoxToCartComplex';
 import FinalPrice from '../../../../components/Price';
 import ImagePreview from './ImagePreview';
 import BottomSheet from '../../../../components/BottomSheet';

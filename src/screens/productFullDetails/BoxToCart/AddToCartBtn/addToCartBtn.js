@@ -3,7 +3,7 @@ import defaultStyles from './addToCartBtn.style';
 import { Text, TouchableOpacity, View } from 'react-native';
 import LottieView from 'lottie-react-native';
 import mergeStyles from '../../../../utils/mergeStyles';
-import { useAddToCartBtn } from '../../../../talons/product/boxToCart/useAddToCartBtn';
+import { useAddToCartBtn } from '../../../../talons/catalog/product/boxToCart/useAddToCartBtn';
 import t from '../../../../utils/identify';
 import { func, string, bool } from 'prop-types';
 
@@ -18,6 +18,7 @@ const AddToCartBtn = (props, ref) => {
     addToCartSuccessMessage,
   } = props;
   const styles = mergeStyles(defaultStyles, props.style);
+  console.log({ addToCartStyle: props.style, styles });
   const talonProps = useAddToCartBtn({
     ref,
     buildCartItems,

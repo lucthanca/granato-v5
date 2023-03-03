@@ -5,7 +5,7 @@ import defaultStyles from './groupedProductItem.style';
 import { object } from 'prop-types';
 import Qty from '../qty';
 import FinalPrice from '../../../../../components/Price';
-import { useGPItem } from '../../../../../talons/product/boxToCart/Complex/type/GroupedProduct/useGPItem';
+import { useGPItem } from '../../../../../talons/catalog/product/boxToCart/Complex/type/GroupedProduct/useGPItem';
 import PriceTiersDetails from '../../../priceTiersDetails';
 
 const GroupedProductItem = (props, ref) => {

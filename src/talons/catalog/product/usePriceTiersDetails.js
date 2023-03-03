@@ -1,4 +1,4 @@
-import { useCatalogTaxPriceConfig } from '../storeConfig/useCatalogTaxPriceConfig';
+import { useCatalogTaxPriceConfig } from '../../storeConfig/useCatalogTaxPriceConfig';
 
 export const usePriceTiersDetails = props => {
   const priceConfig = useCatalogTaxPriceConfig();

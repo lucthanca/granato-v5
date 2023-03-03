@@ -2,7 +2,7 @@ import React from 'react';
 import { FlatList, View, Text } from 'react-native';
 import makeid from '../../../utils/makeId';
 import ProductCart from './productCart';
-import { useRelatedProduct } from '../../../talons/product/RelatedProduct/useRelatedProduct';
+import { useRelatedProduct } from '../../../talons/catalog/product/RelatedProduct/useRelatedProduct';
 import { object, string } from 'prop-types';
 import t from '../../../utils/identify';
 import defaultStyles from './relatedProduct.style';
