@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useState } from 'react';
 import { useMutation } from '@apollo/client';
-import AppStorage from '@helper/storage';
+// import AppStorage from '@helper/storage';
 import { CREATE_ACCOUNT } from './createAccount.gql';
 import Toast from 'react-native-toast-message';
-import Identify from '@utils/Identify'
+import Identify from '../../../utils/identify';
 
-export const createAccount = (props) => {
+export const createAccount = props => {
   const [info, setInfo] = useState({});
   const { navigation } = props;
 
@@ -17,7 +17,7 @@ export const createAccount = (props) => {
       Toast.show({
         type: 'customSuccess',
         props: {
-          text2: Identify.__('Create Account successfully')
+          text2: Identify.__('Create Account successfully'),
         },
         topOffset: 16,
         autoHide: true,
@@ -31,7 +31,7 @@ export const createAccount = (props) => {
       Toast.show({
         type: 'customError',
         props: {
-          text2: Identify.__(error.toString())
+          text2: Identify.__(error.toString()),
         },
         topOffset: 16,
         autoHide: true,

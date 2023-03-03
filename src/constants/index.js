@@ -113,6 +113,15 @@ class Constants {
     '2xl': BASE_SIZE * 1.75,
     '3xl': BASE_SIZE * 2,
   };
+
+  static button_color = '#FF9900';
+  static button_disable_color = '#999999';
+  static line_color = '#555555';
+  static border_color = '#333333';
+  static error_border_color = '#DD0000';
+  static success_border_color = '#009900';
+  static button_background_color = '#f69435';
+
   static button = {
     height: {
       primary: 45,

@@ -20,6 +20,7 @@
     "@react-navigation/native-stack": "^6.9.12",
     "@reduxjs/toolkit": "^1.9.3",
     "apollo3-cache-persist": "^0.14.1",
+    "formik": "^2.2.9",
     "graphql": "^16.6.0",
     "lodash": "^4.17.21",
     "lodash.merge": "^4.6.2",

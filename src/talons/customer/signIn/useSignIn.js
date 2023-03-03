@@ -2,9 +2,11 @@ import { useMutation, useApolloClient } from '@apollo/client';
 import { useCallback } from 'react';
 
 import operations, { SIGNIN_MUTATION, MERGE_CARTS } from './useSignIn.gql';
-import { useCartContext, useUserContext } from 'simicart';
+
 import { useAwaitQuery } from '../../useAwaitQuery';
-import { retrieveCartId } from '../../../lib/store/actions/cart';
+import { retrieveCartId } from '../../../store/actions/cart';
+import { useUserContext } from '../../../context/user';
+import { useCartContext } from '../../../context/cart';
 
 export const useSignIn = () => {
   const { createCartMutation, getCustomerQuery, getCartDetailsQuery } = operations;
@@ -12,7 +14,7 @@ export const useSignIn = () => {
   const [{ cartId }, { getCartDetails, removeCart, createCart }] = useCartContext();
   const [, { getUserDetails }] = useUserContext();
   const [signIn, { loading: signInLoading, error, data }] = useMutation(SIGNIN_MUTATION);
-  const [mergeCarts, {loading: mergeCartsLoading}] = useMutation(MERGE_CARTS);
+  const [mergeCarts, { loading: mergeCartsLoading }] = useMutation(MERGE_CARTS);
   const fetchUserDetails = useAwaitQuery(getCustomerQuery);
   const [fetchCartId, { loading: fetchCartIdLoading }] = useMutation(createCartMutation);
   const fetchCartDetails = useAwaitQuery(getCartDetailsQuery);
@@ -26,7 +28,7 @@ export const useSignIn = () => {
         const signInResponse = await signIn({
           variables: {
             email,
-            password
+            password,
           },
         });
 
@@ -38,23 +40,23 @@ export const useSignIn = () => {
         // Create and get the customer's cart id.    const [, { dispatch }] = useEventingContext();
 
         await createCart({
-          fetchCartId
+          fetchCartId,
         });
         const destinationCartId = await retrieveCartId();
-        console.log('sourceCartId: ', cartId)
-        console.log('destinationCartId: ', destinationCartId)
+        console.log('sourceCartId: ', cartId);
+        console.log('destinationCartId: ', destinationCartId);
         // Merge the guest cart into the customer cart.
         const { data: mergeData } = await mergeCarts({
           variables: {
             sourceCartId,
             destinationCartId,
-          }
+          },
         });
-        console.log('merge: ', mergeData)
+        console.log('merge: ', mergeData);
 
         await getUserDetails({ fetchUserDetails });
         const { data } = await fetchUserDetails({
-          fetchPolicy: 'cache-only'
+          fetchPolicy: 'cache-only',
         });
         // dispatch({
         //   type: 'USER_SIGN_IN',
@@ -81,7 +83,6 @@ export const useSignIn = () => {
         // console.log("mergeCartResponse: ", mergeCartResponse);
         // saveCartId(destinationCartId);
 
-
         // incoming hoc/Test
         // if(token) {
         //   const getCartIdResponse = await getCartId();
@@ -105,7 +106,6 @@ export const useSignIn = () => {
         // }
 
         // -- End incoming
-
       } catch (error) {
         if (process.env.NODE_ENV !== 'production') {
           console.error(error);
@@ -113,11 +113,8 @@ export const useSignIn = () => {
         // setIsSigningIn(false);
       }
     },
-    [
-      cartId,
-    ]
+    [cartId],
   );
-
 
   return {
     signIn_error: error,
@@ -126,6 +123,6 @@ export const useSignIn = () => {
     mergeCartsLoading: mergeCartsLoading,
     fetchCartIdLoading: fetchCartIdLoading,
     signIn,
-    handleSubmit
+    handleSubmit,
   };
 };
