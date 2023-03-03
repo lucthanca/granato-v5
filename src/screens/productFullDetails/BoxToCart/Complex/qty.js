@@ -14,7 +14,7 @@ const Qty = (props, ref) => {
   const talonProps = useQty({ ref, initQty, onQtyChange });
   const { handleQtyChange, inputRef, qty, handleOnEndEditing, handleQtyDecrease, handleQtyInCrease } = talonProps;
 
-  console.log('RENDER QTY');
+  // console.log('RENDER QTY');
   return (
     <View style={[styles.qtyBox]}>
       <TouchableOpacity onPress={handleQtyDecrease} disabled={isNaN(parseFloat(qty)) || parseFloat(qty) <= initQty}>

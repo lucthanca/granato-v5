@@ -7,12 +7,12 @@ export const createCart = props => {
   const [createCartGuest, { loading: createCartGuestLoading, error, data }] = useMutation(CREATE_EMPTY_CART_GUEST);
   useEffect(() => {
     if (createCartGuestLoading) {
-      console.log('loading...');
+      // console.log('loading...');
     } else if (!createCartGuestLoading && data) {
       AppStorage.setData('cartId', data.id);
     }
     if (error) {
-      console.log('error: ', error);
+      // console.log('error: ', error);
     }
   }, [createCartGuestLoading, data, error]);
   return {

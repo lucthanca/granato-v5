@@ -36,7 +36,7 @@ export const useAddToCartBtn = props => {
         type: 'customError',
         text1: t.__('Error'),
         props: {
-          text2: error,
+          text2: typeof error === 'object' ? error.message : error,
         },
         topOffset: 16,
         autoHide: false,
@@ -46,7 +46,7 @@ export const useAddToCartBtn = props => {
   }, [error]);
 
   useEffect(() => {
-    console.log({ addToCartError, addToCartLoading });
+    // console.log({ addToCartError, addToCartLoading });
     if (addToCartError && !addToCartLoading) {
       setError(t.__("Can't add product to cart."));
       if (onAddToCartError) {
@@ -73,7 +73,7 @@ export const useAddToCartBtn = props => {
       try {
         const cartItems = buildCartItems();
         if (cartItems.length === 0) {
-          throw t.__('Please selected required option.');
+          throw { message: t.__('Please selected required option.') };
         }
         const data = {
           cartId,
@@ -82,11 +82,9 @@ export const useAddToCartBtn = props => {
         await addProductsToCart({
           variables: data,
         });
-        console.log(buildCartItems());
         setStep(STEP.SHOW_ANIM);
       } catch (e) {
-        console.log(e);
-        setError(e);
+        setError(e.message);
         setStep(STEP.INIT);
       }
     };
@@ -139,7 +137,7 @@ export const useAddToCartBtn = props => {
         if (canAddCart === can) {
           return;
         }
-        console.log({ can });
+        // console.log({ can });
         setCanAddCart(can);
       },
     }),

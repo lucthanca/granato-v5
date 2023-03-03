@@ -63,7 +63,7 @@ export const useGetCart = () => {
 
   useEffect(() => {
     if (cartId) {
-      console.log(' on refetch');
+      // console.log(' on refetch');
       refetch();
     }
   }, [cartId]);

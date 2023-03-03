@@ -13,7 +13,7 @@ const ConfigurableProduct = (props, ref) => {
   const styles = mergeStyles(defaultStyles, props.style);
   const talonProps = useCPAddToCart({ ref, qtyRef, ...restProps });
   const { configurableOptions, handleSelectedOption } = talonProps;
-  console.log('RENDER configurable options');
+  // console.log('RENDER configurable options');
   return (
     <>
       {configurableOptions &&

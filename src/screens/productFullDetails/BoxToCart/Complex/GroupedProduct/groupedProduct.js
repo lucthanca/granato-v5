@@ -12,7 +12,7 @@ const GroupedProduct = (props, ref) => {
   const styles = mergeStyles(defaultStyles, props.style);
   const talonProps = useGPAddToCart(rest, ref);
   const { groupedItems, itemRefs } = talonProps;
-  console.log('RENDER: grouped complex box to cart');
+  // console.log('RENDER: grouped complex box to cart');
   return (
     <>
       {groupedItems && (

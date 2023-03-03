@@ -6,26 +6,26 @@ const ImageCard = ({ index, animationValue, url, width, height }) => {
   const WIDTH = width / 1.1;
   const HEIGHT = (height ?? width) / 1.1;
 
-  const cardStyle = useAnimatedStyle(() => {
-    const scale = interpolate(animationValue.value, [-0.1, 0, 1], [0.95, 1, 1], Extrapolate.CLAMP);
-
-    const translateX = interpolate(animationValue.value, [-1, -0.2, 0, 1], [0, WIDTH * 0.3, 0, 0]);
-
-    const transform = {
-      transform: [
-        { scale },
-        { translateX },
-        { perspective: 200 },
-        {
-          rotateY: `${interpolate(animationValue.value, [-1, 0, 0.4, 1], [30, 0, -25, -25], Extrapolate.CLAMP)}deg`,
-        },
-      ],
-    };
-
-    return {
-      ...withAnchorPoint(transform, { x: 0.5, y: 0.5 }, { width: WIDTH, height: HEIGHT }),
-    };
-  }, [index]);
+  // const cardStyle = useAnimatedStyle(() => {
+  //   const scale = interpolate(animationValue.value, [-0.1, 0, 1], [0.95, 1, 1], Extrapolate.CLAMP);
+  //
+  //   const translateX = interpolate(animationValue.value, [-1, -0.2, 0, 1], [0, WIDTH * 0.3, 0, 0]);
+  //
+  //   const transform = {
+  //     transform: [
+  //       { scale },
+  //       { translateX },
+  //       { perspective: 200 },
+  //       {
+  //         rotateY: `${interpolate(animationValue.value, [-1, 0, 0.4, 1], [30, 0, -25, -25], Extrapolate.CLAMP)}deg`,
+  //       },
+  //     ],
+  //   };
+  //
+  //   return {
+  //     ...withAnchorPoint(transform, { x: 0.5, y: 0.5 }, { width: WIDTH, height: HEIGHT }),
+  //   };
+  // }, [index]);
 
   return (
     <Animated.View
@@ -53,7 +53,7 @@ const ImageCard = ({ index, animationValue, url, width, height }) => {
             shadowOpacity: 0.5,
             shadowRadius: 8,
           },
-          cardStyle,
+          // cardStyle,
         ]}
       />
 

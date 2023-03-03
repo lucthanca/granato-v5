@@ -4,22 +4,22 @@ import config from '../Helper/config';
 
 export const useGlobal = props => {
   const { getStoreConfigData, getAvailableStoresConfigData } = useGraphQl();
-  const [ _storeConfigData, setStoreConfigData ] = useState(undefined);
-  const [ _availableStores, setAvailableStores ] = useState([]);
+  const [_storeConfigData, setStoreConfigData] = useState(undefined);
+  const [_availableStores, setAvailableStores] = useState([]);
 
   const availableStore = {
-    store_name: "Default Store View",
-    code: "default"
+    store_name: 'Default Store View',
+    code: 'default',
   };
-  
-  useEffect( () => {
+
+  useEffect(() => {
     getStoreConfigData().then(data => {
       // console.log(data);
-      return setStoreConfigData( () => data )
+      return setStoreConfigData(() => data);
     });
     getAvailableStoresConfigData().then(data => {
-      console.log({data2: data});
-      return setAvailableStores( () => data )
+      // console.log({data2: data});
+      return setAvailableStores(() => data);
     });
   }, []);
 
@@ -28,9 +28,9 @@ export const useGlobal = props => {
       return _storeConfigData;
     }
     return {
-      store_name: "Default Store View",
-      locale: "en_US",
-      code: "default"
+      store_name: 'Default Store View',
+      locale: 'en_US',
+      code: 'default',
     };
   }, [_storeConfigData]);
 
@@ -46,6 +46,6 @@ export const useGlobal = props => {
     STORE_VIEW_CODE: config?.store_view_code || storeConfigData.code,
     DEFAULT_LOCALE: storeConfigData?.locale?.replace('_', '-') || 'en-US',
     AVAILABLE_STORE_VIEWS: availableStores,
-    DEFAULT_COUNTRY_CODE: config.default_country_code || 'US'
-  }
-}
+    DEFAULT_COUNTRY_CODE: config.default_country_code || 'US',
+  };
+};

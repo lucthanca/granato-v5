@@ -12,7 +12,7 @@ export const createAccount = props => {
   const [createCustomer, { loading, error, data }] = useMutation(CREATE_ACCOUNT);
   useEffect(() => {
     if (loading) {
-      console.log('loading...');
+      // console.log('loading...');
     } else if (!loading && data) {
       Toast.show({
         type: 'customSuccess',

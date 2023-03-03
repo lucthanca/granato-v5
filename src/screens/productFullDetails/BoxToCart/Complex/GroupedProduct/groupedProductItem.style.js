@@ -25,12 +25,7 @@ export default {
   },
   qtyBox: {},
   priceBox: {
-    finalPrice: {
-      text: {
-        color: Constants.color.red.darker,
-        fontWeight: '700',
-      },
-    },
+    finalPrice_text: { color: Constants.color.red.darker, fontWeight: '700' },
     root: {
       marginVertical: Constants.alignSize[1],
     },

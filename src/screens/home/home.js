@@ -1,19 +1,12 @@
-import { Button, ScrollView, Text } from "react-native";
+import { Button, ScrollView, Text } from 'react-native';
 import React from 'react';
-import Footer from "../../components/footer";
+import Footer from '../../components/footer';
 function HomeScreen({ navigation }) {
   return (
     <>
-      <ScrollView contentContainerStyle={{alignItems: "center", justifyContent: "center",flex: 1}}>
+      <ScrollView contentContainerStyle={{ alignItems: 'center', justifyContent: 'center', flex: 1 }}>
         <Text>Home Screen</Text>
-        <Button
-          title="Go to Profile"
-          onPress={() => navigation.navigate("Profile")}
-        />
-        <Button
-          title="Go to Invite"
-          onPress={() => navigation.navigate("Help")}
-        />
+        <Button title="Go to Product Page" onPress={() => navigation.navigate('ProductFullDetail')} />
       </ScrollView>
       <Footer />
     </>

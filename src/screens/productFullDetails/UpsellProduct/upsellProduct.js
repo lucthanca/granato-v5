@@ -14,6 +14,10 @@ const UpsellProduct = props => {
   const talonProps = useUpsellProduct({ urlKey });
   const { upsellProducts } = talonProps;
 
+  if (!upsellProducts?.length) {
+    return null;
+  }
+
   return (
     <View style={styles.root}>
       <View>

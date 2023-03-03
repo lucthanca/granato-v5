@@ -1,11 +1,12 @@
 import React, { forwardRef, memo } from 'react';
 import defaultStyles from './addToCartBtn.style';
-import { Text, TouchableOpacity, View } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import LottieView from 'lottie-react-native';
 import mergeStyles from '../../../../utils/mergeStyles';
 import { useAddToCartBtn } from '../../../../talons/catalog/product/boxToCart/useAddToCartBtn';
 import t from '../../../../utils/identify';
 import { func, string, bool } from 'prop-types';
+import composeStyles from '../../../../utils/composeStyles';
 
 const AddToCartBtn = (props, ref) => {
   const {
@@ -16,9 +17,11 @@ const AddToCartBtn = (props, ref) => {
     action,
     canAddCart,
     addToCartSuccessMessage,
+    style: propsStyles,
   } = props;
-  const styles = mergeStyles(defaultStyles, props.style);
-  console.log({ addToCartStyle: props.style, styles });
+  // const styles = mergeStyles(defaultStyles, props.style);
+  const styles = composeStyles(defaultStyles, propsStyles);
+  // console.log({ addToCartStyle: props.style, styles });
   const talonProps = useAddToCartBtn({
     ref,
     buildCartItems,
@@ -36,7 +39,7 @@ const AddToCartBtn = (props, ref) => {
     isAdded,
     isLoading,
   } = talonProps;
-  console.log('RENDER: Add To Cart BUTTON');
+  // console.log('RENDER: Add To Cart BUTTON');
   return (
     <TouchableOpacity
       disabled={!talonCanAddCart}

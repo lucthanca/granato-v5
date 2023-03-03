@@ -18,7 +18,7 @@ export const useGlobal = props => {
       return setStoreConfigData(() => data);
     });
     getAvailableStoresConfigData().then(data => {
-      console.log({ availableStoreConfigData: data });
+      // console.log({ availableStoreConfigData: data });
       return setAvailableStores(() => data);
     });
   }, []);

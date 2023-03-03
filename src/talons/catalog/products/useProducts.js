@@ -57,7 +57,7 @@ export const useProducts = props => {
   });
 
   useEffect(() => {
-    console.log('calledData: ', calledData);
+    // console.log('calledData: ', calledData);
   }, [calledData]);
 
   const [loadGetProducts, { called, loading: loadingLazy, data: dataLazy, error: errorLazy }] = useLazyQuery(GET_PRODUCTS);
@@ -88,7 +88,7 @@ export const useProducts = props => {
           };
         }
       });
-      console.log('newFilterQuery: ', newFilterQuery);
+      // console.log('newFilterQuery: ', newFilterQuery);
       setProducts([]);
       setCurrentPage(1);
       loadGetProducts({
@@ -125,10 +125,10 @@ export const useProducts = props => {
   }, [filterData, categoryId]);
 
   React.useEffect(() => {
-    console.log('data : ', data);
-    console.log(' dataLazy : ', dataLazy);
-    console.log('error : ', error);
-    console.log('errorLazy : ', errorLazy);
+    // console.log('data : ', data);
+    // console.log(' dataLazy : ', dataLazy);
+    // console.log('error : ', error);
+    // console.log('errorLazy : ', errorLazy);
     // if (!dataLazy || refesh && data && data?.products?.items) {
     //   setProducts(data?.products?.items);
     //   setFilterLayers(data?.products?.aggregations);

@@ -58,7 +58,7 @@ const CartContextProvider = props => {
 
   useEffect(() => {
     // cartApi.getCartDetails initializes the cart if there isn't one.
-    console.log('init cart on load');
+    // console.log('init cart on load');
     cartApi.getCartDetails({
       fetchCartId,
       fetchCartDetails,

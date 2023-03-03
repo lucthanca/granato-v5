@@ -1,6 +1,6 @@
 import { useCallback, useState, useRef, useMemo } from 'react';
 
-export const useBoxToCart = (props) => {
+export const useBoxToCart = props => {
   const { product, onQtyChange } = props;
   const [qty, setQty] = useState(1);
 
@@ -9,13 +9,13 @@ export const useBoxToCart = (props) => {
   const ref = useRef(null);
 
   const handleSetQty = useCallback(
-    (val) => {
+    val => {
       setQty(val);
       if (onQtyChange) {
         onQtyChange(val);
       }
     },
-    [setQty, onQtyChange]
+    [setQty, onQtyChange],
   );
   const hideQty = useMemo(() => {
     // no need show qty input logic here
@@ -32,15 +32,15 @@ export const useBoxToCart = (props) => {
   }, [product]);
 
   const handleAddToCart = useCallback(
-    (e) => {
-      console.log('Add to cart neffff');
+    e => {
+      // console.log('Add to cart neffff');
       if (hasComplexBoxToCart) {
         complexAddCartBoxRef?.current?.open();
         return;
       }
       addCartRef?.current.addToCart();
     },
-    [hasComplexBoxToCart]
+    [hasComplexBoxToCart],
   );
 
   return {

@@ -81,7 +81,7 @@ const Item = props => {
       <View>
         <TouchableOpacity
           onPress={() => {
-            console.log('country: ', country);
+            // console.log('country: ', country);
             const addressData = {
               id: item.id,
               first_name: item.firstname,

@@ -38,7 +38,7 @@ function Gallery(props) {
         <ImageViewer
           renderIndicator={() => null}
           handleLongPress={image => {
-            console.log({ image });
+            // console.log({ image });
           }}
           onChange={handlePressImage}
           index={selectedI}

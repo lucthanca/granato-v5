@@ -5,7 +5,7 @@ class AppStorage {
     try {
       await AsyncStorage.setItem(key, value);
     } catch (error) {
-      console.log('Error saving data');
+      // console.log('Error saving data');
     }
   };
 
@@ -16,7 +16,7 @@ class AppStorage {
         return value;
       }
     } catch (error) {
-      console.log('Error retrieving data');
+      // console.log('Error retrieving data');
     }
   };
 

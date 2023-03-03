@@ -28,7 +28,7 @@ const Price = props => {
 };
 
 Price.propTypes = {
-  style: shape({
+  customStyles: shape({
     root: object,
     text: object,
   }),

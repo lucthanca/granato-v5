@@ -14,7 +14,7 @@ const ImagePreview = (props, ref) => {
   const talonProps = useImagePreview({ baseImages, ref });
   const { imageBase, imageLoading, handleImageStartLoading, handleImageLoadingDone, finalImages } = talonProps;
 
-  console.log('Render small preview');
+  // console.log('Render small preview');
   return (
     <View style={[styles.root]}>
       {imageLoading && (

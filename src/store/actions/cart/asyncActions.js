@@ -39,7 +39,7 @@ export const createCart = payload =>
       const { data, errors } = await fetchCartId({
         fetchPolicy: 'no-cache',
       });
-      console.log('createCart data: ', data);
+      // console.log('createCart data: ', data);
 
       let receivePayload;
 
@@ -79,7 +79,7 @@ export const getCartDetails = payload => {
   return async function thunk(dispatch, getState, { apolloClient }) {
     const { cart, user } = getState();
     const { cartId } = cart;
-    console.log('cart: ', cart);
+    // console.log('cart: ', cart);
     const { isSignedIn } = user;
 
     // if there isn't a cart, create one then retry this operation

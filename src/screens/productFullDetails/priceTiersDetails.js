@@ -82,7 +82,7 @@ const TierPriceMessage = props => {
 
 const PriceTiersDetails = props => {
   const { tierPrices } = props;
-  console.log(tierPrices);
+  // console.log(tierPrices);
   return (
     <>
       {tierPrices?.length > 0 &&

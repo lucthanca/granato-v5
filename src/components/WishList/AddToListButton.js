@@ -11,7 +11,7 @@ const AddToListButton = props => {
       <TouchableOpacity
         onPress={() => {
           if (isSelected) {
-            console.log('1');
+            // console.log('1');
             handleRemoveProductFromWishlist();
           } else {
             handleClick();

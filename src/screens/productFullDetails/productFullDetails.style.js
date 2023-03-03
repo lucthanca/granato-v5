@@ -14,14 +14,12 @@ export default StyleSheet.create({
   productSkuText: { color: Constants.color.gray.lighter },
   productNameText: { marginTop: Constants.alignSize[1], fontSize: Constants.fontSize.md },
   priceBox: StyleSheet.create({
-    finalPrice: StyleSheet.create({
-      text: {
-        fontSize: Constants.fontSize.lg,
-        color: Constants.color.red.darker,
-        fontWeight: '600',
-      },
-      currency: { marginRight: Constants.alignSize[1] },
-    }),
+    finalPrice_text: {
+      fontSize: Constants.fontSize.lg,
+      color: Constants.color.red.darker,
+      fontWeight: '600',
+    },
+    currency: { marginRight: Constants.alignSize[1] },
     root: { marginVertical: Constants.alignSize[2] },
   }),
   tierPricesBox: { marginVertical: Constants.alignSize[2] },

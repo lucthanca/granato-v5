@@ -62,6 +62,7 @@ const DEFAULT_CUSTOM_ICONS = {
 
 const baseCustomConfig = ({ text1, props }, field) => {
   const { icon, text2, customColor } = props;
+  // console.log({ props }, { text1 });
   const styles = StyleSheet.create({
     container: {
       width: CUSTOM_TOAST_WIDTH,

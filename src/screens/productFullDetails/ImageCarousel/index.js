@@ -5,9 +5,10 @@ const { width } = Dimensions.get('window');
 import PaginationItem from './item';
 import Constants from '../../../constants';
 import Carousel from 'react-native-reanimated-carousel';
-import ImageCard from './imageCard';
+const ImageCard = React.lazy(() => import('./imageCard'));
 
 import { useNavigation } from '@react-navigation/native';
+import LoadingIndicator from '../../../components/Spinner/loadingIndicator';
 const WRAPPER_PADDING = Constants.alignSize[2];
 const CAROUSEL_WRAPPER_PADDING = Constants.alignSize[2];
 
@@ -57,13 +58,15 @@ const Images = props => {
           autoPlayInterval={1500}
           data={sortedImages}
           renderItem={({ index, animationValue }) => (
-            <ImageCard
-              animationValue={animationValue}
-              key={index}
-              index={index}
-              url={sortedImages[index].url}
-              width={width - WRAPPER_PADDING * 2 - CAROUSEL_WRAPPER_PADDING * 2}
-            />
+            <React.Suspense fallback={<LoadingIndicator />}>
+              <ImageCard
+                animationValue={animationValue}
+                key={index}
+                index={index}
+                url={sortedImages[index].url}
+                width={width - WRAPPER_PADDING * 2 - CAROUSEL_WRAPPER_PADDING * 2}
+              />
+            </React.Suspense>
           )}
         />
         <View

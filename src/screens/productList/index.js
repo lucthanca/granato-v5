@@ -129,7 +129,7 @@ function ProductListPage(props) {
   }, [filterData]);
 
   if (!loadingGlobal && products) {
-    console.log('filterData: ', filterData);
+    // console.log('filterData: ', filterData);
     return (
       <View style={{ flex: 1, backgroundColor: 'white' }}>
         <ProductListHeader />

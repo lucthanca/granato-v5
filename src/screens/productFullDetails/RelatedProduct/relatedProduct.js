@@ -13,6 +13,11 @@ const RelatedProduct = props => {
   const talonProps = useRelatedProduct({ urlKey });
   const { relatedProducts, isLoading } = talonProps;
   const styles = mergeStyles(defaultStyles, props.style);
+  const renderItem = React.useCallback(({ item, index }) => <ProductCart key={item.sku} product={item} />, []);
+
+  if (!relatedProducts?.length) {
+    return null;
+  }
 
   return (
     <View style={styles.root}>
@@ -25,7 +30,9 @@ const RelatedProduct = props => {
         keyExtractor={() => makeid()}
         showsHorizontalScrollIndicator={false}
         horizontal
-        renderItem={({ item, index }) => <ProductCart product={item} customerWishlist={customerWishlist} />}
+        renderItem={renderItem}
+        initialNumToRender={3}
+        windowSize={3}
       />
     </View>
   );

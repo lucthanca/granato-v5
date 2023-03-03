@@ -57,8 +57,8 @@ export const submitPaymentMethodAndBillingAddress = payload =>
   async function thunk(dispatch) {
     const { countries, formValues } = payload;
     const { billingAddress, paymentMethod } = formValues;
-    console.log(billingAddress);
-    console.log(countries);
+    // console.log(billingAddress);
+    // console.log(countries);
     // return Promise.all([
     dispatch(submitBillingAddress({ billingAddress, countries })), dispatch(submitPaymentMethod(paymentMethod));
     // ]);

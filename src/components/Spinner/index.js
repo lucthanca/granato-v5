@@ -18,7 +18,7 @@ const Spinner = ({
   children,
   spinnerKey,
   iconSize = 128,
-  useBlur = true,
+  useBlur = false,
   blurAmount = 8,
   animDuration = 1500,
 }) => {

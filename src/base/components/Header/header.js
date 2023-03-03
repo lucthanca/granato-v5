@@ -7,7 +7,7 @@ import styles from './styles';
 function Header() {
   const navigation = useNavigation();
   const route = useRoute();
-  console.log('route: ', route);
+  // console.log('route: ', route);
 
   return (
     <TouchableOpacity

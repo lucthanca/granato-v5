@@ -6,7 +6,7 @@ import AntDesign from 'react-native-vector-icons/AntDesign';
 import Constants from '../../constants';
 const ProductsSort = props => {
   const { sortData } = props.route.params;
-  console.log('sortData: ', sortData);
+  // console.log('sortData: ', sortData);
   return (
     <View>
       {/* <View style={{ marginTop: 50, flexDirection: 'row', justifyContent: 'space-between', height: 50, alignItems: 'center', paddingHorizontal: 10 }}>

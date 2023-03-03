@@ -46,7 +46,7 @@ const reducerMap = {
     };
   },
   [actions.getDetails.receive]: (state, { payload, error }) => {
-    console.log(payload);
+    // console.log(payload);
     if (error) {
       return {
         ...state,

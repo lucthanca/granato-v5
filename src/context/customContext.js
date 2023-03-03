@@ -16,7 +16,7 @@ const CustomContextProvider = props => {
   // );
   //
   // const contextValue = useMemo(() => [customState, appApi], [appApi, customState]);
-  console.log(Object.keys(props));
+  // console.log(Object.keys(props));
   const contextValue = 1;
   return <CustomContext.Provider value={contextValue}>{props.children}</CustomContext.Provider>;
 };

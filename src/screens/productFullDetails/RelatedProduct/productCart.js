@@ -9,10 +9,10 @@ import AddToWishlist from '../../../components/WishList/addToWishlist';
 import { object } from 'prop-types';
 
 const ProductCart = props => {
-  const { product, customerWishlist } = props;
+  const { product } = props;
   const talonProps = useProductCart({ product });
   const { finalPrice, priceConfig, minimumPrice, handlePressProduct } = talonProps;
-  const styles = StyleSheet.create(mergeStyles(defaultStyles, props.style));
+  const styles = mergeStyles(defaultStyles, props.style);
   // console.log('RENDER product cart');
   return (
     <View style={styles.root}>
@@ -24,7 +24,7 @@ const ProductCart = props => {
             resizeMode={FastImage.resizeMode.contain}
           />
           <View style={styles.wishlistIcon}>
-            <AddToWishlist loop={false} product={product} customerWishlist={customerWishlist} />
+            <AddToWishlist loop={false} product={product} />
           </View>
         </View>
         <View style={styles.productInfo}>

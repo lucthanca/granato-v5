@@ -29,7 +29,7 @@ export const useProductPage = props => {
     },
   });
 
-  console.log({ productQueryData, productQueryError, productQueryLoading });
+  // console.log({ productQueryData, productQueryError, productQueryLoading });
   const product = useMemo(() => {
     // console.log(productQueryData);
     if (!productQueryData) {

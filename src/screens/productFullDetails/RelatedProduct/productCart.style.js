@@ -43,21 +43,17 @@ export default {
     fontSize: Constants.fontSize.sm,
   },
   priceBox: StyleSheet.create({
-    finalPrice: StyleSheet.create({
-      text: {
-        fontSize: Constants.fontSize['2sm'],
-        color: Constants.color.red.darker,
-        fontWeight: '600',
-      },
-    }),
+    finalPrice_text: {
+      fontSize: Constants.fontSize['2sm'],
+      color: Constants.color.red.darker,
+      fontWeight: '600',
+    },
     asLowAsText: {
       fontSize: Constants.fontSize.sm,
       color: Constants.color.gray.darker,
     },
-    regularPrice: StyleSheet.create({
-      text: {
-        fontSize: Constants.fontSize.xs,
-      },
-    }),
+    regularPrice_text: {
+      fontSize: Constants.fontSize.xs,
+    },
   }),
 };

@@ -169,7 +169,7 @@ export const useWishlist = props => {
 
   const errorToastProps = useMemo(() => {
     if (errorAddingProduct) {
-      console.log('errorAddingProduct: ', errorAddingProduct);
+      // console.log('errorAddingProduct: ', errorAddingProduct);
       Toast.show({
         type: 'customError',
         text1: "'Something went wrong adding the product to your wishlist.'",

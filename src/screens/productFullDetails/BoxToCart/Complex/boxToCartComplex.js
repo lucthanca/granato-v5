@@ -63,7 +63,7 @@ const BoxToCartComplex = forwardRef((props, ref) => {
     styles.unSupportedTypeRoot,
     styles.unSupportedTypeText,
   ]);
-  console.log('RENDER COMPLEX COMPONENT');
+  // console.log('RENDER COMPLEX COMPONENT');
 
   return (
     <BottomSheet ref={sheetRef} renderFullScreenPopup={() => <FullScreenPreview ref={fullPreviewImgRef} />}>

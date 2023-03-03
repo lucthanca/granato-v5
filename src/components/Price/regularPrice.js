@@ -9,16 +9,15 @@ import { object, shape } from 'prop-types';
 const RegularPrice = props => {
   const { price, style } = props;
   const styles = mergeStyles(defaultStyles, style);
-
-  const { root, text, ...rest } = styles;
+  // console.log({ styles, defaultStyles, style });
 
   if (!price) {
     return null;
   }
   return (
-    <View style={[root]}>
-      <Text style={[text]}>{t.__('Regular Price: ')}</Text>
-      <SinglePrice value={price.value} currencyCode={price.currency} style={{ root, text, ...rest }} />
+    <View style={styles.root}>
+      <Text style={[styles.text, styles.label]}>{t.__('Regular Price: ')}</Text>
+      <SinglePrice value={price.value} currencyCode={price.currency} style={styles} />
     </View>
   );
 };
@@ -29,5 +28,6 @@ RegularPrice.propTypes = {
   style: shape({
     root: object,
     text: object,
+    label: object,
   }),
 };

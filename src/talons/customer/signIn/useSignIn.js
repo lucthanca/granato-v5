@@ -43,8 +43,8 @@ export const useSignIn = () => {
           fetchCartId,
         });
         const destinationCartId = await retrieveCartId();
-        console.log('sourceCartId: ', cartId);
-        console.log('destinationCartId: ', destinationCartId);
+        // console.log('sourceCartId: ', cartId);
+        // console.log('destinationCartId: ', destinationCartId);
         // Merge the guest cart into the customer cart.
         const { data: mergeData } = await mergeCarts({
           variables: {
@@ -52,7 +52,7 @@ export const useSignIn = () => {
             destinationCartId,
           },
         });
-        console.log('merge: ', mergeData);
+        // console.log('merge: ', mergeData);
 
         await getUserDetails({ fetchUserDetails });
         const { data } = await fetchUserDetails({

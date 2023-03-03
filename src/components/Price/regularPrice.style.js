@@ -1,5 +1,7 @@
 import Constants from '../../constants';
-export default {
+import { StyleSheet } from 'react-native';
+
+export default StyleSheet.create({
   root: { flexDirection: 'row' },
   text: {
     fontWeight: '300',
@@ -7,4 +9,4 @@ export default {
     fontSize: Constants.fontSize.sm,
     color: Constants.color.gray.darker,
   },
-};
+});
