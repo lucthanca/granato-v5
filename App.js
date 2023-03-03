@@ -5,51 +5,22 @@
  * @format
  * @flow strict-local
  */
+import React from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
-
-const MainApp = props => {
-
-  return (
-    <SafeAreaView style={{ flex: 1 }}></SafeAreaView>
-  );
-}
-
-
-
-import * as React from 'react';
-import { View, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createDrawerNavigator } from '@react-navigation/drawer';
+import config from './src/config';
+import AppComposite from './src/appComposite';
 import Routes from './src/routes';
-function Feed() {
+import Toast from 'react-native-toast-message';
+import toastConfig from './src/components/toast/customToast';
+const MainApp = props => {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Feed Screen</Text>
-    </View>
+    <SafeAreaView style={{ flex: 1 }}>
+      <AppComposite apiBase={config.merchant_url}>
+        <Routes />
+        <Toast config={toastConfig} />
+      </AppComposite>
+    </SafeAreaView>
   );
-}
+};
 
-function Article() {
-  return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-      <Text>Article Screen</Text>
-    </View>
-  );
-}
-
-const Drawer = createDrawerNavigator();
-
-function MyDrawer() {
-  return (
-    <Drawer.Navigator>
-      <Drawer.Screen name="Feed" component={Feed} />
-      <Drawer.Screen name="Article" component={Article} />
-    </Drawer.Navigator>
-  );
-}
-
-export default function App() {
-  return (
-    <Routes />
-  );
-}
+export default MainApp;

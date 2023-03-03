@@ -1,6 +1,5 @@
-import lodash from "lodash";
-import { StyleSheet } from "react-native";
+import lodash from 'lodash';
 
 export default (...rest) => {
-  return StyleSheet.create(lodash.merge(...rest));
-}
+  return lodash.merge(...rest);
+};

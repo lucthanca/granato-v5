@@ -10,6 +10,7 @@ const AppContextProvider = props => {
   const { actions, appState, asyncActions, children } = props;
 
   React.useEffect(() => {
+    console.log({ asyncActions });
     asyncActions.getRecentSearches();
   }, []);
 

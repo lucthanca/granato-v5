@@ -1,4 +1,4 @@
-import storage from '@helper/storage';
+import storage from '../../../utils/simpleStorage';
 import { signOut } from '../user';
 import actions from './actions';
 

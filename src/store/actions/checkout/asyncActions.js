@@ -2,7 +2,7 @@ import storage from '../../../utils/simpleStorage';
 import { closeDrawer } from '../app';
 import { createCart, removeCart } from '../cart';
 import actions from './actions';
-import { requestMimic } from '../../../../temporaryMocks/Network/requestMimic';
+// import { requestMimic } from '../../../../temporaryMocks/Network/requestMimic';
 
 //currently commenting out all storage-related f
 export const beginCheckout = payload =>
