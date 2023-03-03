@@ -30,6 +30,11 @@ const DrawerContent = props => {
         focused={activeStack === 'ProductFullDetail'}
       />
       <DrawerItem label="Category" onPress={() => navigation.navigate('Category')} focused={activeStack === 'Category'} />
+      <DrawerItem
+        label="ProductList"
+        onPress={() => navigation.navigate('ProductList')}
+        focused={activeStack === 'ProductList'}
+      />
     </DrawerContentScrollView>
   );
 };
